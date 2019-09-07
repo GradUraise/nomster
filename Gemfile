@@ -35,11 +35,14 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
-# gem 'bootstrap', '~> 4.3.1'
+gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem 'will_paginate', '> 3.0'
-gem 'popper_js', '~> 1.11.1'
-gem 'bootstrap', '4.0.0.alpha6'
+# gem 'popper_js', '~> 1.11.1'
+# MR commented out 41 and added newer version 9/7/19 12:02
+gem 'popper_js', '~> 1.14.5'
+#gem 'bootstrap', '4.0.0.alpha6'
+#Melissa Roetker - commented this out 9/7/19 12 pm
 gem 'simple_form'
 gem 'font-awesome-rails'
 gem 'devise'
