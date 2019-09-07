@@ -20,7 +20,8 @@ module Nomster
     config.assets.paths << "#{Rails.root}/app/assets/fonts"
 
     # Precompile additional assets
-    config.assets.precompile += %w( .svg .eot .woff .ttf )
+    #config.assets.precompile += %w( .svg .eot .woff .ttf )
+    # MR commmented out 9/7/19 12:27 pm
 
   end
 end
