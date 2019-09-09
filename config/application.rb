@@ -17,12 +17,12 @@ module Nomster
     # the framework and any gems in your application.
 
     # Add the fonts path
-    # config.assets.paths << "#{Rails.root}/app/assets/fonts"
-    # MR commented out 9/7/19 1:41
+    config.assets.paths << "#{Rails.root}/app/assets/fonts"
+    # MR commented out 9/7/19 1:41; put back in 9/8
 
     # Precompile additional assets
-    #config.assets.precompile += %w( .svg .eot .woff .ttf )
-    # MR commmented out 9/7/19 12:27 pm
+    config.assets.precompile += %w( .svg .eot .woff .ttf )
+    # MR commmented out 9/7/19 12:27 pm; put back in 9/8
 
   end
 end
