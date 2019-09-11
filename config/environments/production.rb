@@ -32,6 +32,9 @@ Rails.application.configure do
   config.assets.compile = false
   #changed from true to false - mr 9/11
 
+  config.serve_static_assets = false
+  # added 9/11 MR
+
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
