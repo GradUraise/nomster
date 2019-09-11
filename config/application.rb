@@ -21,7 +21,7 @@ module Nomster
     # MR commented out 9/7/19 1:41; put back in 9/8
 
     # Precompile additional assets
-    config.assets.precompile += %w( .svg .eot .woff .ttf )
+    #config.assets.precompile += %w( .svg .eot .woff .ttf )
     # MR commmented out 9/7/19 12:27 pm; put back in 9/8
 
   end
