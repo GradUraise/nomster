@@ -6,15 +6,12 @@
  
   <% if @place.latitude.present? && @place.longitude.present? %>
     <script>
-
     function initMap() {
       var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>};
-
       var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 12,
         center: myLatLng
       });
-
       var marker = new google.maps.Marker({
         position: myLatLng,
         map: map,
@@ -44,7 +41,7 @@
 
 <%= simple_form_for @comment, url: place_comments_path(@place) do |f| %>
   <%= f.input :message %>
-  <%= f.input :rating, as: :select, collection: Comment::RATINGS %>
+  <%= f.input :rating %>
   <%= f.submit "Add a Comment", class: 'btn btn-primary' %>
 <% end %>
 
@@ -53,8 +50,8 @@
 <% @place.comments.each do |comment| %>
   <div>
     <blockquote>
-      
-      <%= comment.message %>
+      <b><%= comment.rating %></b> -
+        <%= comment.message %>
       <small><%= comment.user.email %></small>
     </blockquote>
   </div>
