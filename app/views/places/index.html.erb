@@ -21,5 +21,15 @@
       </div>
     <% end %>
 
+    <% if place.photos.present? %>
+      <div class="col-12">
+        <%= image_tag place.photos.last.picture.to_s %>
+        <br />
+        - "<%= place.photos.last.caption %>"
+      </div>
+    <% end %>
+</div>
+
+
   </div>
 <% end %>
