@@ -42,7 +42,7 @@
 
 <div class="col-10 offset-1">
   <h1 class="float-left">Comments</h1>
-  <!-- Button trigger modal -->
+  <!-- Comment trigger modal -->
   <button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#myCommentModal">
     Add a comment
   </button>
@@ -52,14 +52,13 @@
 <br />
 
 <div class="col-10 offset-1">
-  <!-- Button trigger modal -->
+  <!-- Photo trigger modal -->
   <button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#myPhotoModal">
     Add a Photo
   </button>
 </div>
 
 <div class="clear"></div>
-
 <br />
 
 <!-- Comment Modal -->
@@ -88,7 +87,6 @@
 
 <div class="clear"></div>
 
-
 <!-- Photo Modal -->
 <div class="modal fade" id="myPhotoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -101,11 +99,12 @@
       </div>
       <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
         <div class="modal-body">
+          <%= f.input :picture %>
           <%= f.input :caption %>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <%= f.submit "Submit", class: 'btn btn-primary' %>
+          <%= f.submit "Submit Photo", class: 'btn btn-primary' %>
         </div>
       <% end %>
     </div>
@@ -113,6 +112,7 @@
 </div>
 
 <div class="clear"></div>
+
 
 
 <div class="row">
@@ -124,6 +124,17 @@
         <% end %>
         <%= comment.message %>
         <small><%= comment.user.email %></small>
+      </blockquote>
+    </div>
+  <% end %>
+</div>
+
+<div class="row">
+  <% @place.photos.each do |photo| %>
+    <%= image_tag photo.picture.url %>
+    <div class="col-12 col-sm-6">
+      <blockquote>
+        <%= photo.caption %>
       </blockquote>
     </div>
   <% end %>
