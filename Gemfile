@@ -50,7 +50,7 @@ gem 'geocoder'
 gem 'figaro'
 # gem 'sprockets', '~> 4.0'
 gem 'rails_serve_static_assets'
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 1.3'
 gem 'fog-aws'
 
 
